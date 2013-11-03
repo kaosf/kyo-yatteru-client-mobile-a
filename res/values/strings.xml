@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">今日やってる？</string>
-    <string name="uri">http://kyo-yatteru.herokuapp.com</string>
+    <string name="uri">http://kyo-yatteru.herokuapp.com/shops/</string>
+    <string name="token"></string>
 
 </resources>

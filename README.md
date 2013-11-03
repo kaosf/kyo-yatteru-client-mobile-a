@@ -1,4 +1,4 @@
-# kyo-yatteru
+# kyo-yatteru for client
 
 ## License
 

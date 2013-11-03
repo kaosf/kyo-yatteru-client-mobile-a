@@ -1,4 +1,4 @@
-package org.kyo.yatteru;
+package org.kyo.yatteruc;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -7,6 +7,8 @@ import android.webkit.WebViewClient;
 import android.view.KeyEvent;
 
 public class MainActivity extends Activity {
+
+  private static final int SHOP_ID = 0;
 
   private WebView wv;
 
@@ -21,7 +23,7 @@ public class MainActivity extends Activity {
         return false;
       }
     });
-    wv.loadUrl(getString(R.string.uri));
+    wv.loadUrl(getString(R.string.uri) + SHOP_ID + "/edit?token=" + getString(R.string.token));
   }
 
   public boolean onKeyDown(int keyCode, KeyEvent event) {
