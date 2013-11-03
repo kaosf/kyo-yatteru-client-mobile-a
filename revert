@@ -1,0 +1,15 @@
+#! /bin/sh
+
+if [ -d src.bk ]
+then
+  rm -rf src
+  mv src.bk src
+fi
+if [ -f AndroidManifest.xml.bk ]
+then
+  mv AndroidManifest.xml.bk AndroidManifest.xml
+fi
+if [ -f strings.xml.bk ]
+then
+  mv strings.xml.bk res/values/strings.xml
+fi

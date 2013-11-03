@@ -1,0 +1,13 @@
+#! /bin/sh
+
+SHOP_ID=$1
+TOKEN=$2
+
+cp -r src src.bk
+sed -e "s/SHOP_ID = 0/SHOP_ID = ${SHOP_ID}/" src/org/kyo/yatteruc/MainActivity.java -i
+sed -e "s/yatteruc/yatteruc${SHOP_ID}/" src/org/kyo/yatteruc/MainActivity.java -i
+mv src/org/kyo/yatteruc src/org/kyo/yatteruc${SHOP_ID}
+cp AndroidManifest.xml AndroidManifest.xml.bk
+sed -e "s/yatteruc/yatteruc${SHOP_ID}/" AndroidManifest.xml -i
+cp res/values/strings.xml strings.xml.bk
+sed -e "s/\"token\"></\"token\">${TOKEN}</" res/values/strings.xml -i
